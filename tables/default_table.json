@@ -1,0 +1,8 @@
+{
+  "rarities": {
+    "Common": { "weight": 60, "items": {"Potion": 10, "Gold Coin": 5, "Dagger": 1} },
+    "Uncommon": { "weight": 25, "items": ["Ring", "Scroll"] },
+    "Rare": { "weight": 10, "items": {"Gem": 1, "Magic Sword": 1} },
+    "Legendary": { "weight": 5, "items": {"Ancient Artifact": 1} }
+  }
+}
