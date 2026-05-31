@@ -15,18 +15,18 @@ from typing import Any, Dict, Iterable, List, Tuple
 def weighted_choice(rng, choices: Iterable[Tuple[Any, float]]):
 	"""Return a single element chosen from choices where each is (value,weight)."""
 	elems = []
-	cum = []
+	cumul = []
 	total = 0.0
 	for value, weight in choices:
 		if weight <= 0:
 			continue
 		elems.append(value)
 		total += float(weight)
-		cum.append(total)
+		cumul.append(total)
 	if not elems:
 		raise ValueError("No choices with positive weight")
 	r = rng.random() * total
-	for i, c in enumerate(cum):
+	for i, c in enumerate(cumul):
 		if r < c:
 			return elems[i]
 	return elems[-1]
